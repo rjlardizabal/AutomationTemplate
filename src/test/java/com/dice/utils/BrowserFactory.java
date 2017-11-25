@@ -5,13 +5,14 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class BrowserFactory {
+	
+	private static WebDriver driver;
 
 	public BrowserFactory() {
 		// TODO Auto-generated constructor stub
 	}
 
-	public static WebDriver getDriver(String browser) {
-		WebDriver driver = null;
+	public static WebDriver getDriverofBrowser(String browser) {
 
 		switch (browser) {
 		case "firefox":
@@ -25,7 +26,7 @@ public class BrowserFactory {
 
 			break;
 
-		default:
+		default: System.out.println("Incorrect Browser");
 			break;
 		}
 

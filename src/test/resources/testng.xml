@@ -1,35 +1,30 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
 <suite name="FirstTestSuite" parallel="tests" thread-count="2">
+
+
 	<listeners>
-		<listener class-name="com.dice.utils.TestListener"></listener>
+		<listener class-name="com.dice.utils.Listeners.TestListener"></listener>
 	</listeners>
-	<test name="LogInTest-FF">
-
-
-		<parameter name="browser" value="firefox"></parameter>
-		<groups>
-			<run>
-				<exclude name="broken"></exclude>
-			</run>
-		</groups>
-		<classes>
-			<class name="com.dice.test.LoginTest">
-			</class>
-
-		</classes>
-	</test>
-
 	<test name="LogInTest-CH">
 		<parameter name="browser" value="chrome"></parameter>
 		<classes>
 			<class name="com.dice.test.LoginTest">
 				<methods>
-					<include name="negativeTestWithDataProvider"></include>
+					<include name="positiveLoginTest"></include>
 				</methods>
 			</class>
 
 		</classes>
+	</test>
+
+
+	<test name="LogInTest-FF">
+		<parameter name="browser" value="firefox"></parameter>
+		<classes>
+			<class name="com.dice.test.LoginTest"></class>
+		</classes>
+
 	</test>
 
 </suite>

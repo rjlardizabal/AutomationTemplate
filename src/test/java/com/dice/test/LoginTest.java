@@ -15,7 +15,7 @@ public class LoginTest extends BaseTest {
 
 	private LoginPage loginPage;
 	private ProfilePage profilePage;
-	private final static String EXPECTED_PROFILE_TITLE_PAGE = "Seeker Dashboard - Profile";
+	private final static String EXPECTED_PROFILE_TITLE_PAGE = "Seeker Dashboard - Profileaa";
 	private final static String EXPECTED_PROFILE_NAME = "RommelTest LardizabalTest";
 	Logger logger = Logger.getLogger(LoginTest.class);
 	

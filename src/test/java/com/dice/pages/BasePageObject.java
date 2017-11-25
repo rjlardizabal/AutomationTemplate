@@ -8,20 +8,22 @@ import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class BasePageObject<T> {
-	protected WebDriver driver;
-	protected WebDriverWait wait;
+public class BasePageObject {
+	public WebDriver driver;
+	public WebDriverWait wait;
 	private JavascriptExecutor js;
 
 	protected BasePageObject(WebDriver driver) {
+
+		if(driver==null) {
+			System.out.println("driver is null");
+		}
 		this.driver = driver;
 		this.wait = new WebDriverWait(driver, 10000);
 		js = (JavascriptExecutor) driver;
 	}
 
-	public BasePageObject() {
-		// TODO Auto-generated constructor stub
-	}
+
 
 
 	protected void type(String text, WebElement element) {

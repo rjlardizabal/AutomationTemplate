@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class ProfilePage extends BasePageObject<ProfilePage> {
+public class ProfilePage extends BasePageObject {
 
 	@FindBy(id = "mobileEditProfile")
 	private WebElement editProfileButton;
